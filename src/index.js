@@ -8,12 +8,18 @@ import ComplicatedKeyEvents from './complicatedKeyEvents.js'
 
 import BaiduSuggestions from './getBaiduSuggestions.js'
 
+import Base from './base.js'
+
+
 const App =  (props)=>{
   return(
     <div style={{display:"flex",flexDirection:"row",width:"100%",height:"100%"}}>
       <div style={{display:"flex",width:"20%",flexDirection:"column",height:"100%"}} className="links">
 
-          <Link to="/">MultipleData</Link>
+
+          <Link to="/">Base</Link>
+
+          <Link to="/MultipleData">MultipleData</Link>
 
           <Link to="/MultipleClick">MultipleClick</Link>
 
@@ -32,7 +38,8 @@ const App =  (props)=>{
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={MultipleData} />
+      <IndexRoute component={Base} />
+      <Route path="MultipleData" component={MultipleData} />
       <Route path="MultipleClick" component={MultipleClick} />
       <Route path="ComplicatedKeyEvents" component={ComplicatedKeyEvents} />
       <Route path="BaiduSuggestions" component={BaiduSuggestions} />
