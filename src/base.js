@@ -29,7 +29,7 @@ const add2 = ()=>{
 
 const asyncFunc = ()=>{
   Rx.Observable.startAsync(()=>sleep(5000)).subscribe(()=>{
-    refLog.info('log',"Async Operation succeeded!")
+    refLog.info('warn',"Async Operation succeeded!")
 
   })
 }
@@ -39,7 +39,7 @@ const getMaxnum = ()=>{
   .filter(x => x )
   .reduce((prev,x)=>prev>x?prev:x)
   .subscribe((x)=>{
-    refLog.info('log',`max num of this array is ${x}`)
+    refLog.info('warn',`max num of this array is ${x}`)
   });
 }
 

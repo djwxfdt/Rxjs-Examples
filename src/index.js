@@ -8,6 +8,8 @@ import ComplicatedKeyEvents from './complicatedKeyEvents.js'
 
 import BaiduSuggestions from './getBaiduSuggestions.js'
 
+import ReduxApp from './redux/App.js'
+
 import Base from './base.js'
 
 
@@ -27,6 +29,9 @@ const App =  (props)=>{
 
           <Link to="/BaiduSuggestions">BaiduSuggestions</Link>
 
+          <Link to="/ReduxApp">Redux Emulation Example</Link>
+
+
 
       </div>
       <div style={{display:"flex",flexGrow:1}}>{props.children}</div>
@@ -43,6 +48,8 @@ ReactDOM.render(
       <Route path="MultipleClick" component={MultipleClick} />
       <Route path="ComplicatedKeyEvents" component={ComplicatedKeyEvents} />
       <Route path="BaiduSuggestions" component={BaiduSuggestions} />
+      <Route path="ReduxApp" component={ReduxApp} />
+
 
 
     </Route>
