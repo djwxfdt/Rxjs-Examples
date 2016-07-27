@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Rx from 'rx'
+
 export default class AddTodo extends React.Component {
   render() {
     return (
@@ -10,6 +12,14 @@ export default class AddTodo extends React.Component {
         </button>
       </div>
     )
+  }
+
+  componentDidMount(){
+    Rx.Observable.fromEvent(this.refs.input,'keyup')
+    .map(x=>x.keyCode)
+    .subscribe(x=>{
+      x==13?this.handleClick():null;
+    })
   }
 
   handleClick(e) {
