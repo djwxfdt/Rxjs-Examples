@@ -4,6 +4,8 @@ import { Router, Route, hashHistory ,IndexRoute ,Link} from 'react-router'
 
 import MultipleData from './multipleData.js'
 import MultipleClick from './multipleClick.js'
+import MultipleServer from './multipleServer.js'
+
 import ComplicatedKeyEvents from './complicatedKeyEvents.js'
 
 import BaiduSuggestions from './getBaiduSuggestions.js'
@@ -24,6 +26,8 @@ const App =  (props)=>{
           <Link to="/MultipleData">MultipleData</Link>
 
           <Link to="/MultipleClick">MultipleClick</Link>
+
+          <Link to="/MultipleServer">MultipleServer</Link>
 
           <Link to="/ComplicatedKeyEvents">ComplicatedKeyEvents</Link>
 
@@ -46,6 +50,8 @@ ReactDOM.render(
       <IndexRoute component={Base} />
       <Route path="MultipleData" component={MultipleData} />
       <Route path="MultipleClick" component={MultipleClick} />
+      <Route path="MultipleServer" component={MultipleServer} />
+
       <Route path="ComplicatedKeyEvents" component={ComplicatedKeyEvents} />
       <Route path="BaiduSuggestions" component={BaiduSuggestions} />
       <Route path="ReduxApp" component={ReduxApp} />
