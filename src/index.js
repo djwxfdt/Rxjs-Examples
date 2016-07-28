@@ -10,6 +10,8 @@ import ComplicatedKeyEvents from './complicatedKeyEvents.js'
 
 import BaiduSuggestions from './getBaiduSuggestions.js'
 
+import Description from './description.js'
+
 import ReduxApp from './redux/App.js'
 
 import Base from './base.js'
@@ -21,7 +23,9 @@ const App =  (props)=>{
       <div style={{display:"flex",width:"20%",flexDirection:"column",height:"100%"}} className="links">
 
 
-          <Link to="/">Base</Link>
+          <Link to="/">PPT</Link>
+
+          <Link to="/Base">Base</Link>
 
           <Link to="/MultipleData">MultipleData</Link>
 
@@ -47,7 +51,9 @@ const App =  (props)=>{
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Base} />
+      <IndexRoute component={Description} />
+      <Route path="Base" component={Base} />
+
       <Route path="MultipleData" component={MultipleData} />
       <Route path="MultipleClick" component={MultipleClick} />
       <Route path="MultipleServer" component={MultipleServer} />
