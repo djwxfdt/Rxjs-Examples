@@ -43,6 +43,24 @@ const getMaxnum = ()=>{
   });
 }
 
+const takeFistNElem = ()=>{
+  Rx.Observable.from(['0','7','-','99','-1']).take(3)
+  .reduce((acc,v)=>[...acc,v])
+  .subscribe(x=>{
+    refLog.info('warn',`the first 3 elem in  this array is ${x}`)
+  })
+
+}
+
+const sliceElem  = ()=>{
+  Rx.Observable.from(['0','7','-','99','-1'])
+  .slice(2,4)
+  .reduce((acc,v)=>[...acc,v])
+  .subscribe(x=>{
+    refLog.info('warn',`the 3rd and 4th elems in  this array is ${x}`)
+  })
+}
+
 class Base extends React.Component{
 
 
@@ -55,6 +73,8 @@ class Base extends React.Component{
         <input type="button" value="累加器(1^2+50^2)" onClick={add2} />
         <input type="button" value="处理耗时操作" onClick={asyncFunc} />
         <input type="button" value="取最大值['0','7','-','99','-1']" onClick={getMaxnum} />
+        <input type="button" value="取前三个数['0','7','-','99','-1']" onClick={takeFistNElem} />
+        <input type="button" value="取其中3,4位置的数['0','7','-','99','-1']" onClick={sliceElem} />
 
         <input type="button" value="Clear Log" onClick={()=>{refLog.clear();this.setState({show:false})}}/>
 
