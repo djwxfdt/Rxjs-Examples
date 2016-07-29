@@ -32,6 +32,40 @@ const C = ()=>{
   )
 }
 
+const D1= ()=>{
+  return(
+    <div className="page">
+      <img style={{maxWidth:"80%",maxHeight:"40%"}} src="http://reactivex.io/documentation/operators/images/S.AsyncSubject.png" />
+      <img style={{maxWidth:"80%",maxHeight:"40%"}} src="http://reactivex.io/documentation/operators/images/S.AsyncSubject.e.png" />
+    </div>
+  )
+}
+
+const D2= ()=>{
+  return(
+    <div className="page">
+      <img style={{maxWidth:"80%",maxHeight:"40%"}} src="http://reactivex.io/documentation/operators/images/S.BehaviorSubject.png" />
+      <img style={{maxWidth:"80%",maxHeight:"40%"}} src="http://reactivex.io/documentation/operators/images/S.BehaviorSubject.e.png" />
+    </div>
+  )
+}
+
+const D3= ()=>{
+  return(
+    <div className="page">
+      <img style={{maxWidth:"80%",maxHeight:"40%"}} src="http://reactivex.io/documentation/operators/images/S.PublishSubject.png" />
+      <img style={{maxWidth:"80%",maxHeight:"40%"}} src="http://reactivex.io/documentation/operators/images/S.PublishSubject.e.png" />
+    </div>
+  )
+}
+const D4= ()=>{
+  return(
+    <div className="page">
+      <img style={{maxWidth:"80%",maxHeight:"40%"}} src="http://reactivex.io/documentation/operators/images/S.ReplaySubject.png" />
+    </div>
+  )
+}
+
 export default class Description extends  React.Component{
 
   constructor(){
@@ -39,7 +73,7 @@ export default class Description extends  React.Component{
     this.state={
       current:0
     }
-    this.index = 2;
+    this.index = 6;
   }
 
   componentDidMount(){
@@ -75,6 +109,14 @@ export default class Description extends  React.Component{
                 return <B key="b" />
               case 2:
                 return <C key="c" />
+              case 3:
+                return <D1 key="d1" />
+              case 4:
+                return <D2 key="d2" />
+              case 5:
+                return <D3 key="d3" />
+              case 6:
+                return <D4 key="d4" />
              default:
 
            }
