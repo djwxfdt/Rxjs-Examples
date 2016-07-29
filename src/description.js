@@ -66,6 +66,27 @@ const D4= ()=>{
   )
 }
 
+const F = ()=>{
+  return(
+    <div className="page">
+      <h1>The Observer pattern done right</h1>
+      <h3 style={{width:"70%"}}>
+        ReactiveX is a combination of the best ideas from the Observer pattern,
+        the Iterator pattern, and functional programming
+      </h3>
+    </div>
+  )
+}
+
+const E = ()=>{
+  return(
+    <div className="page">
+        <h1>Observable</h1>
+        <img src="/legend.png" style={{maxWidth:"80%",maxHeight:"40%"}} />
+    </div>
+  )
+}
+
 export default class Description extends  React.Component{
 
   constructor(){
@@ -73,7 +94,7 @@ export default class Description extends  React.Component{
     this.state={
       current:0
     }
-    this.index = 6;
+    this.index = 8;
   }
 
   componentDidMount(){
@@ -110,12 +131,16 @@ export default class Description extends  React.Component{
               case 2:
                 return <C key="c" />
               case 3:
-                return <D1 key="d1" />
+                return <F key="f" />
               case 4:
-                return <D2 key="d2" />
+                return <E key="e" />
               case 5:
-                return <D3 key="d3" />
+                return <D1 key="d1" />
               case 6:
+                return <D2 key="d2" />
+              case 7:
+                return <D3 key="d3" />
+              case 8:
                 return <D4 key="d4" />
              default:
 
